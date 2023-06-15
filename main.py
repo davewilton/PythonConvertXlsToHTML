@@ -1,7 +1,8 @@
-# pylint: disable
-import pandas as pd
+# pylint: disable=locally-disabled
+
 import re
 import markdown
+import pandas as pd
 
 
 def convert_excel_to_html(excel_file, output_file):
@@ -31,7 +32,5 @@ def convert_excel_to_html(excel_file, output_file):
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write(html_table)
 
-# Example usage
-excel_file = 'CottonRecommendations.xlsx'
-output_file = 'output.html'
-convert_excel_to_html(excel_file, output_file)
+
+convert_excel_to_html('CottonRecommendations.xlsx', 'output.html')
